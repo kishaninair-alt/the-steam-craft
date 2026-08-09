@@ -21,6 +21,9 @@ const config: Config = {
           DEFAULT: "#8B3A2F",
           deep: "#6E2C23",
         },
+        leaf: {
+          DEFAULT: "#4A7C59",
+        },
         espresso: {
           DEFAULT: "#2B2118",
         },

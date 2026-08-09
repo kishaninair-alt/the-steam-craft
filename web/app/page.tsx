@@ -30,9 +30,10 @@ export default function Home() {
           <h1 className="mt-6 font-serif text-4xl leading-tight text-espresso sm:text-5xl">
             Kerala on a plate. Ahmedabad in the address.
           </h1>
+          <p className="mt-3 font-serif italic text-terracotta">Soft idlis, bold chutneys.</p>
           <p className="mt-5 text-lg leading-relaxed text-espresso/70">
-            Steamed idli, tomato-coconut chutney, and batter made the way our family has always
-            made it — a few hours a day, from our home kitchen, cooked to order.
+            Steamed idli, a tray of chutneys, and batter made the way our family has always made
+            it — a few hours a day, from our home kitchen, cooked to order.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <a
@@ -70,9 +71,11 @@ export default function Home() {
               week of our lives, long before there was a business attached to it.
             </p>
             <p>
-              My mother runs the kitchen. I handle everything around it. Everything is steamed
-              and made fresh in small batches, a few hours a day, with a little help on order-heavy
-              days — not mass-produced, not sitting under a heat lamp.
+              The Steam Craft is made and run by the mother of the house — every recipe, every
+              batch, every call in the kitchen is hers. The father and children are her helpers
+              and her loudest cheerleaders. Everything is steamed and made fresh in small
+              batches, a few hours a day, with a little extra help on order-heavy days — not
+              mass-produced, not sitting under a heat lamp.
             </p>
           </div>
         </div>
@@ -84,17 +87,31 @@ export default function Home() {
         <h2 className="mt-3 font-serif text-3xl text-espresso">Made fresh, cooked to order</h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           <div className="rounded-lg border border-espresso/10 bg-white p-6">
-            <h3 className="font-serif text-xl text-espresso">Steamed Idli & Chutney</h3>
+            <h3 className="font-serif text-xl text-espresso">Steamed Idli & Chutney Tray</h3>
             <p className="mt-2 text-sm text-espresso/70">
-              Soft-steamed idli served with our tomato-coconut chutney — the combination our
-              family has made at home for generations, unchanged.
+              Soft-steamed idli served with our chutney tray — the combination our family has
+              made at home for generations, unchanged.
             </p>
+            <ul className="mt-4 space-y-2 text-sm text-espresso/80">
+              <li className="flex items-center gap-2">
+                <span className="h-2.5 w-2.5 rounded-full bg-leaf" />
+                Pudina-Coconut
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-2.5 w-2.5 rounded-full bg-terracotta" />
+                Kara Tomato-Garlic
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-2.5 w-2.5 rounded-full bg-cream-warm border border-espresso/20" />
+                Classic Coconut
+              </li>
+            </ul>
           </div>
           <div className="rounded-lg border border-espresso/10 bg-white p-6">
             <h3 className="font-serif text-xl text-espresso">Extra Chutney</h3>
             <p className="mt-2 text-sm text-espresso/70">
-              Love the chutney more than the idli? You can order it on its own, in whatever
-              quantity you need.
+              Love one of the three more than the idli? You can order any of them on their own,
+              in whatever quantity you need.
             </p>
           </div>
         </div>
