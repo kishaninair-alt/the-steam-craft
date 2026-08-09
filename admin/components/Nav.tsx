@@ -26,7 +26,11 @@ export default function Nav() {
   return (
     <header className="border-b border-espresso/10 bg-white">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-4">
-        <span className="font-serif text-lg text-espresso">The Steam Craft — Ops</span>
+        <span className="flex items-center gap-2 font-serif text-lg text-espresso">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/tsc-monogram.png" alt="" className="h-8 w-auto object-contain" />
+          Ops
+        </span>
         <nav className="flex flex-wrap items-center gap-1 text-sm">
           {LINKS.map((link) => (
             <Link
