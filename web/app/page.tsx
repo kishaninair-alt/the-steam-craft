@@ -85,35 +85,117 @@ export default function Home() {
       <section id="menu" className="mx-auto max-w-5xl px-6 py-16">
         <p className="font-serif text-sm uppercase tracking-widest text-gold-deep">Menu</p>
         <h2 className="mt-3 font-serif text-3xl text-espresso">Made fresh, cooked to order</h2>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2">
-          <div className="rounded-lg border border-espresso/10 bg-white p-6">
-            <h3 className="font-serif text-xl text-espresso">Steamed Idli & Chutney Tray</h3>
-            <p className="mt-2 text-sm text-espresso/70">
-              Soft-steamed idli served with our chutney tray — the combination our family has
-              made at home for generations, unchanged.
-            </p>
-            <ul className="mt-4 space-y-2 text-sm text-espresso/80">
-              <li className="flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-leaf" />
-                Pudina-Coconut
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-terracotta" />
-                Kara Tomato-Garlic
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-cream-warm border border-espresso/20" />
-                Classic Coconut
-              </li>
-            </ul>
+        <p className="mt-2 font-serif italic text-terracotta">Three chutneys. Endless cravings.</p>
+
+        {/* Signature chutneys */}
+        <div className="mt-8">
+          <h3 className="text-sm font-medium uppercase tracking-widest text-espresso/50">
+            Our signature chutneys, with every order
+          </h3>
+          <div className="mt-4 grid gap-4 sm:grid-cols-3">
+            <div className="flex items-start gap-3 rounded-lg border border-espresso/10 bg-white p-4">
+              <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-cream-warm border border-espresso/20" />
+              <div>
+                <p className="text-sm font-medium text-espresso">Classic Coconut</p>
+                <p className="mt-1 text-xs text-espresso/60">Fresh, creamy, traditionally tempered.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3 rounded-lg border border-espresso/10 bg-white p-4">
+              <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-terracotta" />
+              <div>
+                <p className="text-sm font-medium text-espresso">Onion Tomato</p>
+                <p className="mt-1 text-xs text-espresso/60">Onions, tomatoes, and aromatic spices.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3 rounded-lg border border-espresso/10 bg-white p-4">
+              <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-leaf" />
+              <div>
+                <p className="text-sm font-medium text-espresso">Coconut Tomato</p>
+                <p className="mt-1 text-xs text-espresso/60">Creamy coconut, balanced with tangy tomato.</p>
+              </div>
+            </div>
           </div>
-          <div className="rounded-lg border border-espresso/10 bg-white p-6">
-            <h3 className="font-serif text-xl text-espresso">Extra Chutney</h3>
-            <p className="mt-2 text-sm text-espresso/70">
-              Love one of the three more than the idli? You can order any of them on their own,
-              in whatever quantity you need.
-            </p>
+        </div>
+
+        {/* Idli menu */}
+        <div className="mt-10">
+          <h3 className="text-sm font-medium uppercase tracking-widest text-espresso/50">Idli menu</h3>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            {[
+              {
+                name: "Classic Idli Box",
+                desc: "4 soft & fluffy idlis, served with all 3 signature chutneys.",
+                price: 89,
+              },
+              {
+                name: "Mini Idli Box",
+                desc: "12 bite-sized baby idlis, served with all 3 signature chutneys.",
+                price: 99,
+              },
+              {
+                name: "Podi Baby Idlis",
+                desc: "12 mini idlis tossed in aromatic podi, served with coconut chutney.",
+                price: 119,
+              },
+              {
+                name: "Ghee Podi Baby Idlis",
+                desc: "12 mini idlis tossed in pure ghee & house-special podi, served with coconut chutney.",
+                price: 139,
+              },
+            ].map((item) => (
+              <div key={item.name} className="flex items-start justify-between gap-4 rounded-lg border border-espresso/10 bg-white p-5">
+                <div>
+                  <h4 className="font-serif text-lg text-espresso">{item.name}</h4>
+                  <p className="mt-1 text-sm text-espresso/70">{item.desc}</p>
+                </div>
+                <p className="shrink-0 font-serif text-lg text-espresso">₹{item.price}</p>
+              </div>
+            ))}
           </div>
+        </div>
+
+        {/* Combos */}
+        <div className="mt-10">
+          <h3 className="text-sm font-medium uppercase tracking-widest text-espresso/50">Combos</h3>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            <div className="flex items-start justify-between gap-4 rounded-lg border border-gold/40 bg-cream-idli p-5">
+              <div>
+                <h4 className="font-serif text-lg text-espresso">The Perfect Combo</h4>
+                <p className="mt-1 text-sm text-espresso/70">
+                  4 classic idlis + 8 baby idlis, with all 3 signature chutneys.
+                </p>
+              </div>
+              <p className="shrink-0 font-serif text-lg text-espresso">₹149</p>
+            </div>
+            <div className="flex items-start justify-between gap-4 rounded-lg border border-gold/40 bg-cream-idli p-5">
+              <div>
+                <h4 className="font-serif text-lg text-espresso">The Family Steam Box</h4>
+                <p className="mt-1 text-sm text-espresso/70">
+                  8 classic idlis + 24 baby idlis, generous chutneys — perfect for sharing.
+                </p>
+              </div>
+              <p className="shrink-0 font-serif text-lg text-espresso">₹299</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Extras */}
+        <div className="mt-10">
+          <h3 className="text-sm font-medium uppercase tracking-widest text-espresso/50">Extras</h3>
+          <ul className="mt-4 grid gap-2 text-sm text-espresso/80 sm:grid-cols-2">
+            <li className="flex items-center justify-between rounded-md border border-espresso/10 bg-white px-4 py-2.5">
+              <span>Extra Chutney</span><span className="text-espresso/60">₹20</span>
+            </li>
+            <li className="flex items-center justify-between rounded-md border border-espresso/10 bg-white px-4 py-2.5">
+              <span>Extra Podi</span><span className="text-espresso/60">₹15</span>
+            </li>
+            <li className="flex items-center justify-between rounded-md border border-espresso/10 bg-white px-4 py-2.5">
+              <span>Ghee Topping</span><span className="text-espresso/60">₹20</span>
+            </li>
+            <li className="flex items-center justify-between rounded-md border border-espresso/10 bg-white px-4 py-2.5">
+              <span>All 3 Chutneys — Extra Trio</span><span className="text-espresso/60">₹49</span>
+            </li>
+          </ul>
         </div>
       </section>
 
